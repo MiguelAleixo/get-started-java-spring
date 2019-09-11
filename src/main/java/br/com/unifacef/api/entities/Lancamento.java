@@ -16,13 +16,14 @@ import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+
 import br.com.unifacef.enums.TipoEnum;
 
 @Entity
 @Table(name = "lancamento")
 public class Lancamento implements Serializable {
 
-	private static final long serialVersionUID = -6396755950434951961L;
+	private static final long serialVersionUID = -6364038716776153136L;
 	private Long id;
 	private Date data;
 	private String descricao;

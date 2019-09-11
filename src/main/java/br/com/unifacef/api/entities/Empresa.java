@@ -5,9 +5,9 @@ import java.util.Date;
 import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.FetchType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -20,7 +20,7 @@ import javax.persistence.Table;
 @Table(name = "empresa")
 public class Empresa implements Serializable {
 
-	private static final long serialVersionUID = 4862991749577621407L;
+	private static final long serialVersionUID = 5123609000230607169L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -32,10 +32,10 @@ public class Empresa implements Serializable {
 	@Column(name = "cnpj", nullable = false)
 	private String cnpj;
 
-	@Column(name = "data_criacao", nullable = false)
+	@Column(name = "dataCriacao", nullable = false)
 	private Date dataCriacao;
 
-	@Column(name = "data_atualizacao", nullable = false)
+	@Column(name = "dataAtualizacao", nullable = false)
 	private Date dataAtualizacao;
 
 	@OneToMany(mappedBy = "empresa", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
@@ -106,5 +106,4 @@ public class Empresa implements Serializable {
 		return "Empresa [id=" + id + ", razaoSocial=" + razaoSocial + ", cnpj=" + cnpj + ", dataCriacao=" + dataCriacao
 				+ ", dataAtualizacao=" + dataAtualizacao + ", funcionarios=" + funcionarios + "]";
 	}
-
 }

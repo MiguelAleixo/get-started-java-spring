@@ -18,12 +18,14 @@ import javax.persistence.OneToMany;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
+
 import br.com.unifacef.enums.PerfilEnum;
 
 @Entity
 @Table(name = "funcionario")
 public class Funcionario implements Serializable {
-	private static final long serialVersionUID = -5754246207015712518L;
+
+	private static final long serialVersionUID = 6527724947651156442L;
 
 	private Long id;
 	private String nome;
@@ -178,7 +180,6 @@ public class Funcionario implements Serializable {
 		return "Funcionario [id=" + id + ", nome=" + nome + ", email=" + email + ", senha=" + senha + ", cpf=" + cpf
 				+ ", valorHora=" + valorHora + ", qtdHorasTrabalhoDia=" + qtdHorasTrabalhoDia + ", qtdHorasAlmoco="
 				+ qtdHorasAlmoco + ", perfil=" + perfil + ", dataCriacao=" + dataCriacao + ", dataAtualizacao="
-				+ dataAtualizacao + ", empresa=" + empresa + ", lancamentos=" + lancamentos + "]";
+				+ dataAtualizacao + "empresa=" + empresa + "]";
 	}
-
 }
